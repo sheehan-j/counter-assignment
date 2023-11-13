@@ -46,13 +46,13 @@ test('clicking - decrements the count', () => {
   const initialCount = parseInt(counter.textContent, 10);
   const decrementBtn = screen.getByText('-');
 
-  // Verify increment button displays
+  // Verify decrement button displays
   expect(decrementBtn).toBeInTheDocument();
 
   // Click the button
   fireEvent.click(decrementBtn);
 
-  // Verify the count is incremented
+  // Verify the count is decremented
   const expectedCount = (initialCount-1).toString()
   expect(counter).toHaveTextContent(expectedCount);
 });
